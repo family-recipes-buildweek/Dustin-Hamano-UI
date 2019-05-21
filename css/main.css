@@ -219,9 +219,11 @@
 .team-sort ul {
   margin: 1.25rem 0;
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
 }
 .team-sort ul li {
+  margin: 0.625em 0;
   list-style-type: none;
   cursor: pointer;
 }
