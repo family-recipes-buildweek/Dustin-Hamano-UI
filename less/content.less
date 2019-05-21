@@ -1,0 +1,55 @@
+.grid-container {
+  h3 {
+    font-size: 1.5em;
+  }
+
+  .cell {
+    margin: 1rem auto;
+    text-align: center;
+
+    &:first-child {
+      margin: 2.5rem auto 0;
+    }
+
+    &:last-child {
+      margin-bottom: 2.5rem;
+    }
+
+    img {
+      margin-bottom: 1.563rem;
+    }
+
+    p {
+      margin: 0 auto;
+    }
+  }
+
+  .btn-cta {
+    font-size: 1.25rem;
+  }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  .grid-container {
+    h3 {
+      font-size: 1.75rem;
+    }
+
+    .cell {
+      margin: 2.5rem auto;
+    }
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

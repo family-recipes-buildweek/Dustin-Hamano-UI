@@ -1,0 +1,219 @@
+.grid-container {
+  &.fluid {
+    padding: 0;
+    position: relative;
+    z-index: 100;
+
+    .top-bar {
+      background: #000;
+        
+      .menu.medium-horizontal {
+        background: #000;
+      }
+
+      .top-bar-right {
+        z-index: 100;
+      }
+
+      a {
+        color: #fff;
+        font-family: @secondary-font-stack;
+        -webkit-text-shadow: 0 0 8px rgba(0,0,0,0.8);
+        -moz-text-shadow: 0 0 8px rgba(0,0,0,0.8);
+        -0-text-shadow: 0 0 8px rgba(0,0,0,0.8);
+        text-shadow: 0 0 8px rgba(0,0,0,0.8);
+
+        &:hover {
+          text-decoration: underline;
+        }
+
+        &.btn-cta {
+          background: transparent;
+          font-size: 1rem;
+
+          &:hover {
+            background: #fff;
+            color: @default-text-color;
+            -webkit-text-shadow: 0 0 0 rgba(255,255,255,0.8);
+            -moz-text-shadow: 0 0 0 rgba(255,255,255,0.8);
+            -o-text-shadow: 0 0 0 rgba(255,255,255,0.8);
+            text-shadow: 0 0 0 rgba(255,255,255,0.8);
+          }
+        }
+      }
+    }
+
+    &.carousel-cell {
+      min-height: 463px;
+      padding: 1.563rem;
+      background: #fff url('../imgs/muffins.jpg') no-repeat center center/cover;
+          
+      &[data-img] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 2s linear;
+        z-index: 0;
+
+        &.current {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        background: #fff url('../imgs/pizza.jpg') no-repeat center center/cover;
+
+        .cell {
+          h1 {
+            color: #fff;
+            -webkit-text-shadow: none;
+            -moz-text-shadow: none;
+            -o-text-shadow: none;
+            text-shadow: none;
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        background: #fff url('../imgs/pasta.jpg') no-repeat center center/cover;
+
+        .cell {
+          h1 {
+            /*-webkit-text-shadow: none;
+            -moz-text-shadow: none;
+            -o-text-shadow: none;
+            text-shadow: none;//*/
+          }
+        }
+      }
+
+      .cell {
+        text-align: center;
+
+        h1 {
+          margin-bottom: 1.25rem;
+          color: #333;
+          font-weight: bold;
+          -webkit-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+          -moz-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+          -o-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+          text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+        }
+      }
+
+      .text-area {
+        margin: 0 auto;
+        padding: 0.875rem 0.875rem 1.875rem;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        display: inline-block;
+        -webkit-border-radius: 0.75rem;
+        -moz-border-radius: 0.75rem;
+        -o-border-radius: 0.75rem;
+        border-radius: 0.75rem;
+
+        p{
+          margin-bottom: 1.25rem;
+        }
+
+        br {
+          display: none;
+        }
+
+        .btn-cta {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
+
+.carousel-container {
+  min-height: 463px;
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  .grid-container {
+    &.fluid {
+      padding: 0;
+
+      .top-bar {
+        background: transparent;
+        
+        .menu.medium-horizontal {
+          background: transparent;
+        }
+      }
+    }
+  }
+
+  .carousel-container {
+    margin-top: -54px;
+    min-height: 730px;
+    position: relative;
+
+    .grid-container{
+      &.fluid{
+
+        &.carousel-cell {
+          height: 730px;
+          width: 100%;
+          
+          &[data-img] {
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 0;
+            transition: opacity 2s linear;
+
+            &.current {
+              display: block;
+              opacity: 1;
+            }
+          }
+    
+          .cell {
+            margin-top: 100px;
+            margin-right: 40px;
+            padding: 50px 0 60px;
+    
+            h1 {
+              margin-bottom: 40px;
+              font-weight: 400;
+              font-size: 3rem;
+            }
+    
+            .text-area {
+              padding: 20px 20px 30px;
+              font-size: 1.425rem;
+    
+              br {
+                display: block;
+              }
+    
+              .btn-cta {
+                font-size: 1.425rem;
+              }
+            }
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
