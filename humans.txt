@@ -1,6 +1,7 @@
                            
 /* TEAM */
 Team Lead: Chaya Otikor
+Location: Denver, Colorado, United States
 
 Front-End Developer: Rogelio Caballero
 From: San Diego, California, United States

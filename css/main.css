@@ -216,6 +216,28 @@
 .homepage .grid-container.carousel-cell .text-area .btn-cta {
   font-size: 1.25rem;
 }
+.team-sort ul {
+  margin: 1.25rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+.team-sort ul li {
+  list-style-type: none;
+  cursor: pointer;
+}
+.team-sort ul li:hover {
+  color: #93c0e9;
+  text-decoration: underline;
+}
+.hide {
+  display: none;
+}
+.selected {
+  display: block;
+}
+.team-tab.selected {
+  color: #93c0e9;
+}
 .homepage .grid-container h3 {
   color: #93c0e9;
   font-size: 1.5em;
@@ -296,27 +318,7 @@ footer .copyright {
   margin-bottom: 0.313em;
   font-size: 0.875em;
 }
-@media screen and (min-height: 80.5em) {
-  .homepage footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-  }
-}
-@media screen and (min-height: 84em) {
-  .about footer {
-    width: 100%;
-    position: fixed;
-    bottom: 0;
-  }
-}
 /* Small only */
-@media screen and (max-width: 39.9375em) {
-  footer {
-    width: 100%;
-    position: relative;
-  }
-}
 /* Medium and up */
 @media screen and (min-width: 40em) {
   footer br {

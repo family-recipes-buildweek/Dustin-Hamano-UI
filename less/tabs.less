@@ -1,0 +1,21 @@
+.team-sort {
+  ul  {
+    margin: 1.25rem 0;
+    display: flex;
+    justify-content: space-around;
+
+    li {
+      list-style-type: none;
+      cursor: pointer;
+
+      &:hover {
+        color: @primary-site-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.hide { display: none; }
+.selected { display: block; }
+.team-tab.selected { color: @primary-site-color; }
