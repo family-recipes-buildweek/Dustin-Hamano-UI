@@ -33,7 +33,7 @@
 
           &:hover {
             background: #fff;
-            color: @default-text-color;
+            color: @a-color;
             -webkit-text-shadow: 0 0 0 rgba(255,255,255,0.8);
             -moz-text-shadow: 0 0 0 rgba(255,255,255,0.8);
             -o-text-shadow: 0 0 0 rgba(255,255,255,0.8);
@@ -41,93 +41,12 @@
           }
         }
       }
-    }
-
-    &.carousel-cell {
-      min-height: 503px;
-      padding: 1.563rem;
-      background: #fff no-repeat center center/cover;
-          
-      &[data-img] {
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 2s linear;
-        z-index: 0;
-
-        &.current {
-          display: block;
-          opacity: 1;
-        }
-      }
-
-      &:nth-child(2) {
-        background: #fff no-repeat center center/cover;
-
-        .cell {
-          h1 {
-            color: #fff;
-            -webkit-text-shadow: none;
-            -moz-text-shadow: none;
-            -o-text-shadow: none;
-            text-shadow: none;
-
-            br {
-              display: none;
-            }
-          }
-        }
-      }
-
-      &:nth-child(3) {
-        background: #fff no-repeat center center/cover;
-
-        .cell {
-          h1 {
-            /*-webkit-text-shadow: none;
-            -moz-text-shadow: none;
-            -o-text-shadow: none;
-            text-shadow: none;//*/
-          }
-        }
-      }
-
-      .cell {
-        text-align: center;
-
-        h1 {
-          margin-bottom: 1.25rem;
-          color: #333;
-          font-weight: bold;
-          -webkit-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
-          -moz-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
-          -o-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
-          text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
-        }
-      }
-
-      .text-area {
-        margin: 0 auto;
-        padding: 0.875rem 0.875rem 1.875rem;
-        background: rgba(0,0,0,0.6);
-        color: #fff;
-        display: inline-block;
-        -webkit-border-radius: 0.75rem;
-        -moz-border-radius: 0.75rem;
-        -o-border-radius: 0.75rem;
-        border-radius: 0.75rem;
-
-        p{
-          margin-bottom: 1.25rem;
-        }
-
-        br {
-          display: none;
-        }
-
-        .btn-cta {
-          font-size: 1.25rem;
+      
+      .current a {
+      
+        &:hover {
+          text-decoration: none;
+          cursor: default;
         }
       }
     }
@@ -135,7 +54,28 @@
 }
 
 .carousel-container {
-  min-height: 463px;
+  min-height: 28.938rem;
+}
+
+.about {
+
+  .grid-container.fluid {
+    .top-bar {
+      margin-bottom: 2.25rem;
+
+      .current a {
+        color: @current-a-color;
+      }
+
+      a {
+        -webkit-text-shadow: none;
+        -moz-text-shadow: none;
+        -o-text-shadow: none;
+        text-shadow: none;
+      }
+    }
+
+  }
 }
 
 /* Small only */
@@ -159,14 +99,14 @@
 
   .carousel-container {
     margin-top: -54px;
-    min-height: 730px;
+    min-height: 45.625em;
     position: relative;
 
     .grid-container{
       &.fluid{
 
         &.carousel-cell {
-          height: 730px;
+          height: 45.625em;
           width: 100%;
           
           &[data-img] {
@@ -184,11 +124,11 @@
     
           .cell {
             margin-top: 100px;
-            margin-right: 40px;
-            padding: 50px 0 60px;
+            margin-right: 2.5rem;
+            padding: 3.125em 0 3.75rem;
     
             h1 {
-              margin-bottom: 40px;
+              margin-bottom: 2.5rem;
               font-weight: 400;
               font-size: 3rem;
 
@@ -198,7 +138,7 @@
             }
     
             .text-area {
-              padding: 20px 20px 30px;
+              padding: 1.25rem 1.25rem 1.875em;
               font-size: 1.25rem;
     
               br {
@@ -214,6 +154,10 @@
         
       }
     }
+  }
+
+  .about .grid-container.fluid .top-bar {
+          background: @primary-site-color;
   }
 }
 

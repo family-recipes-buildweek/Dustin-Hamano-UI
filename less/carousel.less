@@ -1,0 +1,93 @@
+.homepage {
+  .grid-container {
+
+    &.carousel-cell {
+      min-height: 31.438em;
+      padding: 1.563rem;
+      background: #fff no-repeat center center/cover;
+          
+      &[data-img] {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 2s linear;
+        z-index: 0;
+
+        &.current {
+          display: block;
+          opacity: 1;
+        }
+      }
+
+      &:nth-child(2) {
+        background: #fff no-repeat center center/cover;
+
+        .cell {
+          h1 {
+            color: #fff;
+            -webkit-text-shadow: none;
+            -moz-text-shadow: none;
+            -o-text-shadow: none;
+            text-shadow: none;
+
+            br {
+              display: none;
+            }
+          }
+        }
+      }
+
+      &:nth-child(3) {
+        background: #fff no-repeat center center/cover;
+
+        .cell {
+          h1 {
+            /*-webkit-text-shadow: none;
+            -moz-text-shadow: none;
+            -o-text-shadow: none;
+            text-shadow: none;//*/
+          }
+        }
+      }
+
+      .cell {
+        text-align: center;
+
+        h1 {
+          margin-bottom: 1.25rem;
+          color: #333;
+          font-weight: bold;
+          -webkit-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+          -moz-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+          -o-text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+          text-shadow: 0 0 0.625rem rgba(255,255,255,0.8), 0 0 10px rgba(255,255,255,0.8);
+        }
+      }
+
+      .text-area {
+        margin: 0 auto;
+        padding: 0.875rem 0.875rem 1.875rem;
+        background: rgba(0,0,0,0.6);
+        color: #fff;
+        display: inline-block;
+        -webkit-border-radius: 0.75rem;
+        -moz-border-radius: 0.75rem;
+        -o-border-radius: 0.75rem;
+        border-radius: 0.75rem;
+
+        p{
+          margin-bottom: 1.25rem;
+        }
+
+        br {
+          display: none;
+        }
+
+        .btn-cta {
+          font-size: 1.25rem;
+        }
+      }
+    }
+  }
+}
