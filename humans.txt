@@ -1,0 +1,19 @@
+                           
+/* TEAM */
+Team Lead: Chaya Otikor
+
+Front-End Developer: Rogelio Caballero
+
+Back-End Developer: Curtis Hubbard
+
+UI Designer: Joel Perez
+
+UI Designer: Dustin Hamano
+
+/* THANKS */
+Name: name or url
+/* SITE */
+Last update: YYYY/MM/DD 
+Standards: HTML5, CSS3, ES6
+Components: Zurb Foundation, jQuery
+Software: VSCode, .less

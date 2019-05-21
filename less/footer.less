@@ -1,0 +1,54 @@
+footer {
+  margin-top: 50px;
+  padding: 1.25rem 0;
+  background: @primary-site-color;
+  text-align: center;
+  border-top: 1px solid #333;
+
+  .copyright {
+    margin-bottom: 0.313em;
+    font-size: 0.875em;
+  }
+}
+
+@media screen and (min-height: 80.5em) {
+  .homepage {
+    footer {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}
+
+@media screen and (min-height: 84em) {
+  .about {
+    footer {
+      width: 100%;
+      position: fixed;
+      bottom: 0;
+    }
+  }
+}
+
+/* Small only */
+@media screen and (max-width: 39.9375em) {
+  footer {
+    width: 100%;
+    position: relative;
+  }
+}
+
+/* Medium and up */
+@media screen and (min-width: 40em) {
+  footer br { display: none; }
+}
+
+/* Medium only */
+@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
+
+/* Large and up */
+@media screen and (min-width: 64em) {}
+
+/* Large only */
+@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
