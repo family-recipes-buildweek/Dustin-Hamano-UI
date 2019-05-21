@@ -3,17 +3,20 @@
 Team Lead: Chaya Otikor
 
 Front-End Developer: Rogelio Caballero
+From: San Diego, California, United States
 
 Back-End Developer: Curtis Hubbard
 
 UI Designer: Joel Perez
 
 UI Designer: Dustin Hamano
+From: Los Angeles, California, United States
 
 /* THANKS */
-Name: name or url
+Name: Ian Belknap
+
 /* SITE */
-Last update: YYYY/MM/DD 
+Last update: 05/21/2019
 Standards: HTML5, CSS3, ES6
 Components: Zurb Foundation, jQuery
 Software: VSCode, .less
