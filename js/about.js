@@ -14,11 +14,17 @@ class SelectTab {
       if(item.classList.contains('selected')) { item.classList.remove('selected'); }
     })
     const cards = document.querySelectorAll('.team-info');
-    cards.forEach( cardEl => {
-      cardEl.classList.remove('hide')
-      if(cardEl.classList.contains('selected')) { cardEl.classList.remove('selected'); }
-      if(cardEl.dataset.role !== clickTarget.dataset.role) { cardEl.classList.add('hide'); }
-    })
+    if(currentSelectedRole !== clickTarget.dataset.role) {
+      cards.forEach( cardEl => {
+        cardEl.classList.remove('hide');
+        cardEl.classList.remove('vanish')
+        if(cardEl.classList.contains('selected')) { cardEl.classList.remove('selected'); }
+        if(cardEl.dataset.role !== clickTarget.dataset.role) {
+          cardEl.classList.add('vanish');
+          setTimeout(() => { cardEl.classList.add('hide');}, 400);
+        }
+      })
+    }
     this.tabElement.classList.add('selected');
     if(currentSelectedRole === clickTarget.dataset.role) {
       tabs.forEach( item => {
@@ -26,11 +32,12 @@ class SelectTab {
       })
       cards.forEach( cardEl => {
         cardEl.classList.remove('hide');
+        setTimeout(() => { cardEl.classList.remove('vanish');}, 10);
+        // cardEl.classList.remove('vanish');
       })
     }
   }
 }
-
 
 let tabs = document.querySelectorAll('.team-tab[data-role]');
 tabs.forEach( item => {

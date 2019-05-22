@@ -1,14 +1,15 @@
 .grid-container {
   &.fluid {
+    width: 100%;
     padding: 0;
-    position: relative;
+    position: absolute;
     z-index: 100;
 
     .top-bar {
-      background: #000;
+      background: @nav-color;
         
       .menu.medium-horizontal {
-        background: #000;
+        background: @nav-color;
       }
 
       .top-bar-right {
@@ -16,12 +17,12 @@
       }
 
       a {
-        color: #fff;
+        color: @a-btn-color;
         font-family: @secondary-font-stack;
-        -webkit-text-shadow: 0 0 8px rgba(0,0,0,0.8);
-        -moz-text-shadow: 0 0 8px rgba(0,0,0,0.8);
-        -0-text-shadow: 0 0 8px rgba(0,0,0,0.8);
-        text-shadow: 0 0 8px rgba(0,0,0,0.8);
+        -webkit-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        -moz-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        -0-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
 
         &:hover {
           text-decoration: underline;
@@ -32,7 +33,7 @@
           font-size: 1rem;
 
           &:hover {
-            background: #fff;
+            background: @a-btn-color;
             color: @a-color;
             -webkit-text-shadow: 0 0 0 rgba(255,255,255,0.8);
             -moz-text-shadow: 0 0 0 rgba(255,255,255,0.8);
@@ -51,10 +52,6 @@
       }
     }
   }
-}
-
-.carousel-container {
-  min-height: 28.938rem;
 }
 
 .about {
@@ -79,13 +76,32 @@
 }
 
 /* Small only */
-@media screen and (max-width: 39.9375em) {}
+@media screen and (max-width: 39.9375em) {
+  .top-bar {
+    a {
+      text-align: center;
+      font-size: 1.5em;
+      line-height: 1.5em;
+
+      &.btn-cta {
+        font-size: 1.5em !important;
+        line-height: 1.5em;
+      }
+    }
+  }
+  
+  
+  .about .grid-container.fluid .top-bar .current a {
+    color: @current-a-color;
+  }
+}
 
 /* Medium and up */
 @media screen and (min-width: 40em) {
   .grid-container {
     &.fluid {
       padding: 0;
+      position: relative;
 
       .top-bar {
         background: transparent;
@@ -93,65 +109,6 @@
         .menu.medium-horizontal {
           background: transparent;
         }
-      }
-    }
-  }
-
-  .carousel-container {
-    margin-top: -54px;
-    min-height: 45.625em;
-    position: relative;
-
-    .grid-container{
-      &.fluid{
-
-        &.carousel-cell {
-          height: 45.625em;
-          width: 100%;
-          
-          &[data-img] {
-            position: absolute;
-            top: 0;
-            left: 0;
-            opacity: 0;
-            transition: opacity 2s linear;
-
-            &.current {
-              display: block;
-              opacity: 1;
-            }
-          }
-    
-          .cell {
-            margin-top: 100px;
-            margin-right: 2.5rem;
-            padding: 3.125em 0 3.75rem;
-    
-            h1 {
-              margin-bottom: 2.5rem;
-              font-weight: 400;
-              font-size: 3rem;
-
-              br {
-                display: block;
-              }
-            }
-    
-            .text-area {
-              padding: 1.25rem 1.25rem 1.875em;
-              font-size: 1.25rem;
-    
-              br {
-                display: block;
-              }
-    
-              .btn-cta {
-                font-size: 1.425rem;
-              }
-            }
-          }
-        }
-        
       }
     }
   }

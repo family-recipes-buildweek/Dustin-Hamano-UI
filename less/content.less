@@ -11,7 +11,7 @@
       text-align: center;
   
       &:first-child {
-        margin: 2.5rem auto 0;
+        margin: 4.5rem auto 0;
       }
   
       &:last-child {
@@ -41,7 +41,7 @@
     }
 
     .cell {
-      margin-top: 40px;
+      margin-top: 1.25rem;
       text-align: center;
     }
 
@@ -50,9 +50,9 @@
     }
   
     img {
-      margin-bottom: 25px;
+      margin-bottom: 1.563em;
       width: 50%;
-      border: 1px solid @default-text-color;
+      border: 0.063rem solid @default-text-color;
       border-radius: 50%;
     }
   
@@ -73,7 +73,13 @@
 }
 
 /* Small only */
-@media screen and (max-width: 39.9375em) {}
+@media screen and (max-width: 39.9375em) {
+  .grid-container {
+    .cell {
+      margin-top: 3.75rem !important;
+    }
+  }
+}
 
 /* Medium and up */
 @media screen and (min-width: 40em) {

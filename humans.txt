@@ -4,17 +4,16 @@ Team Lead: Chaya Otikor
 Location: Denver, Colorado, United States
 
 Front-End Developer: Rogelio Caballero
-From: San Diego, California, United States
+Location: San Diego, California, United States
 
 Back-End Developer: Curtis Hubbard
+Location: Eugene, Oregon, United States
 
 UI Designer: Joel Perez
+Location: Lafayette, Colorado, United States
 
 UI Designer: Dustin Hamano
-From: Los Angeles, California, United States
-
-/* THANKS */
-Name: Ian Belknap
+Location: Los Angeles, California, United States
 
 /* SITE */
 Last update: 05/21/2019
