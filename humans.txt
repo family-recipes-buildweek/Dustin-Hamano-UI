@@ -1,19 +1,22 @@
                            
 /* TEAM */
 Team Lead: Chaya Otikor
+Location: Denver, Colorado, United States
 
 Front-End Developer: Rogelio Caballero
+Location: San Diego, California, United States
 
 Back-End Developer: Curtis Hubbard
+Location: Eugene, Oregon, United States
 
 UI Designer: Joel Perez
+Location: Lafayette, Colorado, United States
 
 UI Designer: Dustin Hamano
+Location: Los Angeles, California, United States
 
-/* THANKS */
-Name: name or url
 /* SITE */
-Last update: YYYY/MM/DD 
+Last update: 05/21/2019
 Standards: HTML5, CSS3, ES6
 Components: Zurb Foundation, jQuery
 Software: VSCode, .less

@@ -1,0 +1,58 @@
+.team-sort {
+  .button {
+    background: transparent;
+    border: 1px solid @primary-site-color;
+  }
+
+  ul  {
+    margin: 1.25rem 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+
+    li {
+      color: @primary-site-color;
+      margin: 0.625em 0;
+      list-style-type: none;
+      cursor: pointer;
+      transition: all 0.25s linear;
+
+      &:hover {
+        background: @primary-site-color;
+        color: @a-btn-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.space {
+  min-height: 46.25rem;
+  padding: 0.625rem 1.25rem;
+}
+
+.team-info {
+  transition: all 0.5s linear;
+}
+
+.vanish {
+  width: 0 !important;
+  height: 0 !important;
+  // display: none;
+  transform: scale(0);
+}
+
+.selected { display: block; }
+.team-tab.selected {
+  background: #ccc;
+  color: @a-btn-color;
+  border: none;
+
+  &:hover {
+    background: #ccc;
+    color: @a-btn-color;
+    text-decoration: none;
+    border: none;
+  }
+}

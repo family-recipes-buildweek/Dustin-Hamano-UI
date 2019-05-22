@@ -10,7 +10,7 @@ class SlideCarousel {
     this.currentImgId = document.querySelector('.carousel-container .carousel-cell[data-default]').dataset.img;
     this.numberOfImgs = this.carouselImgsNum.length;
     this.setupCarousel();
-    this.interval = setInterval(this.nextImg.bind(this), 8000);
+    this.interval = setInterval(this.nextImg.bind(this), 6000);
   }
   setCurrentImg(id) {
       this.currentImgId = id;
