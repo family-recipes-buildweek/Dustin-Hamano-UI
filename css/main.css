@@ -300,7 +300,7 @@
 }
 .homepage .grid-container.recipe-book {
   padding: 7.5rem 0;
-  background: #fff url('../imgs/recipe-book.jpg') no-repeat 50% fixed / cover;
+  background: #fff no-repeat 50% fixed / cover;
   position: relative;
 }
 .homepage .grid-container.recipe-book h3,
