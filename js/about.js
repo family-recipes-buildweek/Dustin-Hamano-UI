@@ -33,7 +33,6 @@ class SelectTab {
       cards.forEach( cardEl => {
         cardEl.classList.remove('hide');
         setTimeout(() => { cardEl.classList.remove('vanish');}, 10);
-        // cardEl.classList.remove('vanish');
       })
     }
   }

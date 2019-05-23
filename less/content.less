@@ -1,5 +1,8 @@
 .homepage {
   .grid-container {
+    &:nth-child(n+3) {
+      padding: 2.5rem 0 3.75rem;
+    }
 
     h3 {
       color: @primary-site-color;
@@ -10,25 +13,59 @@
       margin: 1rem auto;
       text-align: center;
   
-      &:first-child {
-        margin: 4.5rem auto 0;
-      }
-  
-      &:last-child {
-        margin-bottom: 2.5rem;
-      }
-  
       img {
         margin-bottom: 1.563rem;
       }
   
       p {
-        margin: 0 auto;
+        margin: 0 auto 1.25rem;
       }
     }
   
     .btn-cta {
       font-size: 1.25rem;
+    }
+
+    &.recipe-book {
+      padding: 7.5rem 0;
+      background: #fff url('../imgs/recipe-book.jpg') no-repeat 50% fixed/cover;
+      position: relative;
+
+      h3, p {
+        color: #fff;
+        -webkit-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        -moz-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        -o-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+      }
+    }
+
+    &.anywhere {
+
+      img {
+        margin-bottom: 2.5rem;
+      }
+      
+      p {
+        color: @default-text-color;
+      }
+    }
+
+    &.recipe-book, &.anywhere {
+
+      .grid-container {
+        padding: 0;
+      }
+
+      h3 {
+        color: @primary-site-color;
+      }
+  
+      p {
+        max-width: 33.75rem;
+        margin: 1.25rem auto 3.125rem;
+        padding: 0 1.25rem;
+      }
     }
   }
 }
@@ -48,12 +85,14 @@
     h1 {
       color: @primary-site-color;
     }
-  
-    img {
-      margin-bottom: 1.563em;
-      width: 50%;
-      border: 0.063rem solid @default-text-color;
-      border-radius: 50%;
+
+    .space {
+      img {
+        margin-bottom: 1.563em;
+        width: 50%;
+        border: 0.063rem solid @default-text-color;
+        border-radius: 50%;
+      }
     }
   
     h2 {
@@ -63,54 +102,78 @@
   
     h3 {
       color: @primary-site-color;
-      font-size: 1.125rem;
+      font-size: 1.75rem;
     }
     
     p {
       font-size: 1rem;
+      text-align: left;
+    }
+  }
+
+  .anywhere {
+    padding: 40px 20px 100px;
+
+    &::after {
+      content: '';
+      height: 1px;
+      width: 60%;
+      margin: 60px auto 10px;
+      background-color: @default-text-color;
+      display: block;
+    }
+
+    h3 {
+      margin: 0 auto;
+      font-size: 2rem;
+    }
+
+    p {
+      margin: 30px auto;
+      max-width: 500px;
     }
   }
 }
 
-/* Small only */
 @media screen and (max-width: 39.9375em) {
   .grid-container {
+    &.recipe-book {
+      padding: 2.5rem !important;
+
+      .grid-x {
+        margin-top: 0;
+
+        p {
+          padding: 0;
+        }
+      }
+    }
+
+    .grid-x {
+      margin-top: 3.75rem;
+      padding: 0 1.25rem 40px;
+    }
+
     .cell {
-      margin-top: 3.75rem !important;
+      p {
+        max-width: 25rem;
+      }
     }
   }
 }
 
-/* Medium and up */
 @media screen and (min-width: 40em) {
   .homepage {
     .grid-container {
       h3 {
         font-size: 1.75rem;
       }
-  
-      .cell {
-        margin: 2.5rem auto;
-      }
     }
   }
 
   .about {
-    .medium-offset-4 {
-      margin-right: calc(33.33333% + .9375rem);
-    }
-
     .cell:nth-child(n+2) {
       margin-top: 2.5rem;
     }
   }
 }
-
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up */
-@media screen and (min-width: 64em) {}
-
-/* Large only */
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}

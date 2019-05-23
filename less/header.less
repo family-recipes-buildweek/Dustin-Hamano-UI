@@ -3,6 +3,7 @@
     width: 100%;
     padding: 0;
     position: absolute;
+    top: 0;
     z-index: 100;
 
     .top-bar {
@@ -21,7 +22,7 @@
         font-family: @secondary-font-stack;
         -webkit-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
         -moz-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
-        -0-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
+        -o-text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
         text-shadow: 0 0 0.5rem rgba(0,0,0,0.8);
 
         &:hover {
@@ -75,7 +76,6 @@
   }
 }
 
-/* Small only */
 @media screen and (max-width: 39.9375em) {
   .top-bar {
     a {
@@ -96,7 +96,6 @@
   }
 }
 
-/* Medium and up */
 @media screen and (min-width: 40em) {
   .grid-container {
     &.fluid {
@@ -118,10 +117,6 @@
   }
 }
 
-/* Medium only */
-@media screen and (min-width: 40em) and (max-width: 63.9375em) {}
-
-/* Large and up */
 @media screen and (min-width: 64em) {
   .carousel-container {
     .grid-container.fluid.carousel-cell {
@@ -137,6 +132,3 @@
     font-size: 2rem;
   }
 }
-
-/* Large only */
-@media screen and (min-width: 64em) and (max-width: 74.9375em) {}
