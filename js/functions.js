@@ -9,9 +9,11 @@ function unloadFade(event) {
   const siteBody = document.querySelector('body');
   const eventTarget = event.currentTarget;
   const linkTo = eventTarget.getAttribute('href');
-  siteBody.classList.remove('fade-in');
-  siteBody.classList.add('fade-out');
-  setTimeout(() => { window.location.href = linkTo }, 270);
+  if(linkTo !== null && linkTo.charAt(0) !== '#') {
+    siteBody.classList.remove('fade-in');
+    siteBody.classList.add('fade-out');
+    setTimeout(() => { window.location.href = linkTo }, 270);
+  }
   return false;
 }
 

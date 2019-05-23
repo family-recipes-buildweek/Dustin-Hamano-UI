@@ -29,17 +29,17 @@
 
 .space {
   min-height: 46.25rem;
-  padding: 0.625rem 1.25rem;
+  padding: 0.625rem 1.25rem 2.75rem;
 }
 
 .team-info {
+  // overflow: hidden;
   transition: all 0.5s linear;
 }
 
 .vanish {
   width: 0 !important;
   height: 0 !important;
-  // display: none;
   transform: scale(0);
 }
 
@@ -54,5 +54,11 @@
     color: @a-btn-color;
     text-decoration: none;
     border: none;
+  }
+}
+
+@media screen and (max-width: 39.9375em) {
+  .vanish {
+    display: none;
   }
 }
